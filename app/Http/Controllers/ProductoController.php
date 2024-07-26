@@ -12,7 +12,9 @@ class ProductoController extends Controller
      */
     public function index()
     {
-        //
+        $producto = Producto::all();
+        return view('welcome',['productos'=>$producto]);
+        //return view('welcome', compact('productos'));
     }
 
     /**
